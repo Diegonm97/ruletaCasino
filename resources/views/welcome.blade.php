@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+
+$ActualizarDespuesDe = 180;
+ 
+
+header('Refresh: '.$ActualizarDespuesDe);
+?>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <link rel="shortcut icon" href="https://image.flaticon.com/icons/svg/3144/3144771.svg">
