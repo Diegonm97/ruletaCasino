@@ -24,5 +24,7 @@ Route::get('/', function () {
 
 Route::resource('jugadores', 'jugadoresController');
 
-Route::post('/', "JugadoresController@jugar")->name('jugar');
+Route::post('/', "JugadoresController@index")->name('jugar');
+
+Route::get('/destroy/{id}', "JugadoresController@destroy")->name('destroy');
 

@@ -38,6 +38,7 @@
         NEGRO
     @endif
 @endif
+<br>
     @if($ganadores != null)
         @if($ganadores != null)
             Ganadores: 
@@ -53,12 +54,14 @@
 <div class="col-md-12">
     
 <div class="card">
-    <div class="header">
-        <h4 align="center"class="title">Jugadores
+    <div align="center"class="header">
+        
             <!-- Ruta al create de jugador -->
             
-            <a href="{{route('jugadores.create')}}" class="btn btn-default pull-right" aria-hidden="true"><i class="fas fa-plus"></i></a></h4>
+            <a href="{{route('jugadores.create')}}" class="btn btn-default pull-right"  aria-hidden="true">
+                <i class="fas fa-3x fa-user-plus" style="color:#0066ff; width:50px; height:50px;"></i></a>
         
+            
 
         <p align="center" class="category">Aqui se muestran datos de los jugadores registrados.</p>
         
@@ -103,8 +106,8 @@
                         <tr>
                             <td><strong>Acción: </strong></td>
                             <td>    <a href="{{route('jugadores.show', $dato->id)}}"><i class="far fa-eye"></i></a> &nbsp;&nbsp;
-                                    <a href="{{route('jugadores.edit', $dato->id)}}"><i class="fas fa-pen"></i></a>&nbsp;&nbsp;
-                                    <a href="{{route('jugadores.destroy', $dato->id)}}"><i class="fas fa-trash-alt"></i></a>
+                                    <a href="{{route('jugadores.edit', $dato->id)}}"><i class="fas fa-pen"></i></a>&nbsp;&nbsp;&nbsp;
+                                    <a href="{{route('destroy', $dato->id)}}"><i class="fas fa-trash-alt"></i></a>
                             </td>
                         </tr>
 
