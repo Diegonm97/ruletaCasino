@@ -106,34 +106,5 @@ class JugadoresController extends Controller
         return redirect('/');
     }
 
-    /* public static function jugar(Request $request){
-        
-        
-        $jugadores = jugadores::all();
-        $num = rand(1,100);
-        $ganadores = Array();
-
-        foreach($jugadores as $jugador){
-        if($num <= 2 && $jugador->color == 1){
-            array_push($ganadores, $jugador->nombre);
-            $jugador->dinero = $jugador->dinero + (($jugador->dinero * ($jugador->porcentaje/100))*15);
-        }
-        else if($num >= 3 && $num <= 51 && $jugador->color == 2){
-            array_push($ganadores, $jugador->nombre);
-            $jugador->dinero = $jugador->dinero + ($jugador->dinero * ($jugador->porcentaje/100));
-        }
-        else if($num >= 52 && $jugador->color == 3){
-            array_push($ganadores, $jugador->nombre);
-            $jugador->dinero = $jugador->dinero + ($jugador->dinero * ($jugador->porcentaje/100));
-        }else{
-            $jugador->dinero = $jugador->dinero - ($jugador->dinero * ($jugador->porcentaje/100));
-        }
-        $jugador->save();
-        }
-        $datos = jugadores::all();
-
-        
-        return view('welcome', compact('ganadores','datos','num'));
-
-    } */
+    
 }
