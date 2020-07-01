@@ -15,3 +15,19 @@ Esta aplicacion cuenta con las siguientes funcionalidades:
                                         - 49% Negro.
     -Para ejecutar una ronda de juego basta con actualizar la pagina o dar en el boton "Jugar!".
     -Cuenta con un contador el cual cada 3 minutos juega automaticamente.
+
+
+## Instructivo para la instalacion del aplicativo
+
+    -Tener instalado composer y xampp 
+    -Descargar o clonar el repositorio dentro de la carpeta de ../xamp/htdocs
+    -Ejecutar el comando dentro de la carpeta descargada "composer update" (Se demora algunos minutos)
+    -Crear la base de datos en mysql con cualquier nombre deseado para terminos practicos del ejemplo le llamaremos "ruletacasino".
+    -Configurar el archivo ".env.example" modificando su nombre a ".env" y modificar "DB_DATABASE=ruletacasino" (colocando el mismo nombre de la bd) y modificando "DB_USERNAME=" "DB_PASSWORD=" siendo estos el usuario y contraseña respectivamente de la bd (si se tiene).
+    -Ejecutar el comando "php artisan key:generate".
+    -Ejecutar el comando "php artisan migrate".
+    -Ejecutar el comando "php artisan serve".
+    -Ingresar a la pagina (comunmente es la direccion http://127.0.0.1:8000/, esta direccion se puede observar en el cmd).
+    -Se podra observar el boton de agregar jugadores en los cuales se coloca su nombre, el porcentaje que desea apostar y el color que desea.
+    -Cada actualizacion o pulsación del boton "Jugar!" significa una ronda jugada, en la cual se expresa que color y quienes ganaron al igual que se procede a restar o sumar la suma perdida o ganada por cada jugador.
+    -Si se desea, cada 3 minutos al no actualizar manualmente, se actualiza automaticamente la pagina realizando rondas automaticamente.
