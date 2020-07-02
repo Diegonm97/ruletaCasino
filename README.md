@@ -22,10 +22,9 @@ Esta aplicacion cuenta con las siguientes funcionalidades:
     -Tener instalado composer y xampp 
     -Ejecutar xampp y activar los servicios de MySQL y Apache
     -Descargar o clonar el repositorio dentro de la carpeta de ../xampp/htdocs
-    -Ejecutar el comando en el cmd dentro de la carpeta descargada (ej: ../xampp/htdocs/ruletacasino) "composer update" (Se demora algunos minutos)
-ora algunos minutos)
-sql con cualquier nombre deseado para terminos practicos del ejemplo le llamaremos "ruletacasino".
-    -Configurar el archivo ".env.example" modificando su nombre a ".env" y modificar "DB_DATABASE=ruletacasino" (colocando el mismo nombre de la bd) y modificando "DB_USERNAME=" "DB_PASSWORD=" siendo estos el usuario y contraseña respectivamente de la bd (si se tiene).
+    -Ejecutar el comando en el cmd dentro de la carpeta descargada (ej: ../xampp/htdocs/ruletacasino) "composer update" (Se demora algunos minutos).
+    -Crear la base de datos MySQL con cualquier nombre deseado para terminos practicos del ejemplo le llamaremos "ruletacasino".
+    -Configurar el archivo ".env.example" modificando su nombre a ".env" y modificar "DB_DATABASE=ruletacasino" (colocando el mismo nombre de la bd) y modificando "DB_USERNAME=root" "DB_PASSWORD=" siendo estos el usuario y contraseña respectivamente de la bd (si se tiene).
     -Ejecutar el comando "php artisan key:generate".
     -Ejecutar el comando "php artisan migrate".
     -Ejecutar el comando "php artisan serve".

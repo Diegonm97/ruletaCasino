@@ -11,8 +11,11 @@ class JugadoresController extends Controller
     {
 
         $jugadores = jugadores::all();
+        /* Se genera un numero aleatorio entre 1 y 100 */
         $num = rand(1, 100);
         $ganadores = array();
+
+        /* Condicionales para la ganancia o perdida de cada jugador */
 
         foreach ($jugadores as $jugador) {
             if ($num <= 2 && $jugador->color == 1) {
@@ -50,9 +53,8 @@ class JugadoresController extends Controller
 
     public function store(Request $request)
     {
-        /*return "correct test2";
-        header("Location: https://google.com");*/
-        $jugador = new jugadores;           //Crea un objeto de tipo jugadores
+        
+        $jugador = new jugadores;           
 
         $jugador->nombre         = $request->nombre;
         $jugador->dinero           = 10000;
@@ -60,9 +62,9 @@ class JugadoresController extends Controller
         $jugador->color           = $request->color;
 
 
-        $jugador->save();                //Almacena los datos del objeto jugador
+        $jugador->save();                
 
-        return redirect('/');        //Redirecciona a la vista index de jugadores
+        return redirect('/');       
     }
 
 
@@ -86,6 +88,9 @@ class JugadoresController extends Controller
 
         $dato->nombre           = $request->nombre;
         
+        /* Si el jugador ya perdio (llega a 0 de dinero), se coloca automaticamente el menor porcentaje,
+        esto se hace para que si el jugador quiere volver a apostar entonces inicie con la menor apuesta posible */
+
         if ($dato->dinero == 0) {
             $dato->porcentaje = 8;
         } else {
