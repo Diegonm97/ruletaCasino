@@ -8,12 +8,10 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
 
     return JugadoresController::index();
-   
 });
 
-Route::resource('jugadores', 'jugadoresController');
+Route::resource('jugadores', 'JugadoresController');
 
 Route::post('/', "JugadoresController@index")->name('jugar');
 
 Route::get('/destroy/{id}', "JugadoresController@destroy")->name('destroy');
-
